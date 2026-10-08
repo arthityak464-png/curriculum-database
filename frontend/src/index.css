@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/*
+ * KSU Design Tokens — โทนสีมหาวิทยาลัยกาฬสินธุ์
+ * ใช้เป็นคลาส Tailwind ได้ทันที เช่น bg-ksu-navy, text-muted, border-line
+ */
+@theme {
+  --font-sans: 'IBM Plex Sans Thai', 'Noto Sans Thai', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-ksu-navy: #1e3a6b;
+  --color-ksu-navy-dark: #162d54;
+  --color-ksu-blue: #2f5fa8;
+  --color-ksu-emblem: #7fa3d5;
+  --color-ksu-lilac: #a8b9df;
+  --color-ksu-mist: #eef3fb;
+
+  --color-ink: #14243f;
+  --color-muted: #4a5a75;
+  --color-subtle: #6a7891;
+  --color-line: #dce4f0;
+  --color-line-strong: #c9d5e8;
+  --color-canvas: #f4f7fb;
+
+  --color-ok: #13795b;
+  --color-ok-fg: #0f6b4f;
+  --color-ok-bg: #e3f4ec;
+  --color-warn: #e07a1f;
+  --color-warn-fg: #9a4508;
+  --color-warn-bg: #fff0e0;
+  --color-warn-line: #f5c08a;
+  --color-danger: #b42318;
+  --color-danger-bg: #fee4e2;
+}
+
+:root {
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ksu-blue);
+  outline-offset: 2px;
+}
+
+/* แถบเลื่อนบาง ๆ ในพื้นที่ที่เลื่อนได้ */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.anim-fade { animation: fade-in 150ms ease-out; }
+.anim-pop { animation: pop-in 180ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade,
+  .anim-pop { animation: none; }
+}

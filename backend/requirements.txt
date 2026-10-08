@@ -1,0 +1,9 @@
+pdfplumber
+psycopg2-binary
+pydantic
+sentence-transformers
+torch
+uvicorn
+fastapi
+python-multipart
+ocrmypdf

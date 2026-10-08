@@ -1,0 +1,37 @@
+# Python & Virtual Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+
+# AI Models & HuggingFace Cache
+.cache/
+models/
+huggingface/
+
+# Node.js & React Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
+.npm
+npm-debug.log*
+
+# Database & Storage
+pgdata/
+*.log
+
+# Large Uploaded PDFs (ยกเว้นโฟลเดอร์)
+uploads/*.pdf
+backend/uploads/*.pdf
+!uploads/.gitkeep
+
+# IDE & OS Specific
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
